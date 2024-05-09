@@ -1,0 +1,146 @@
+body{
+    margin: 0;
+	padding: 0;
+    height: 100%;
+	min-height: 100vh;
+	justify-content: center;
+    background: linear-gradient(to bottom, #aa1a1a, #581919);
+}
+
+.app{
+    width: 350px;
+    height: 180px;
+    justify-content: center;
+    margin: 12% 33%;
+	padding: 5%;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #aa1a1a, #8b4242, #581919);
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #000;
+}
+
+#nav{
+    background: linear-gradient(to bottom, rgb(73, 21, 21), rgb(73, 21, 21), #7c1313);
+    color: white;
+}
+
+.example-spacer {
+    flex: 1 1 auto; 
+  }
+
+  #dugme{
+    width: 60%;
+    height: 40px;
+    margin: 40px auto;
+    justify-content: center;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+    background-color: rgb(44, 1, 1);
+    color: #f5e8e8;
+}
+#dugme:hover{
+    background: #ee8282;
+    color: #000;
+}
+
+#dugme:disabled{
+    background: #332a2a;
+    color: #000;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    cursor: pointer;
+    width: 35%;
+    height: 40px;
+    margin: 15px 120px;
+    justify-content: center;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: -45px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+    color: #f5e8e8;
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+#file-selector{
+    width: 35%;
+    height: 40px;
+    margin: 30px auto;
+    justify-content: center;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: -45px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+    color: #f5e8e8;
+}
+
+#matforms{
+    display: inline-flex;
+    justify-content: center;
+}
+
+.form{
+    width: 100px;   
+    margin-left: 50px;
+}
+
+#upload{
+    justify-content: center;
+}
+
+#pdfName{
+    color: #ffffff;
+    font-size: 0.8em;
+    margin: 5px 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    margin-bottom: 25px;
+}
+
+label{
+    color: #ffffff;
+    font-size: 1em;
+    justify-content: center;
+    display: flex;
+    margin: 10px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    margin-bottom: 25px;
+}
+
+#errorMsg{
+    font-weight: bold;
+    color: #eeff00;
+    font-size: 0.8em;
+    justify-content: center;
+    display: flex;
+    margin: 40px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    margin-bottom: 25px;
+}
+  

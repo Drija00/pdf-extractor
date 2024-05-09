@@ -1,0 +1,43 @@
+<body>
+    <div id="main">
+        <mat-toolbar id="nav">
+            <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>PDF extractor</span>
+            <span class="example-spacer"></span>
+            <button mat-icon-button class="example-icon favorite-icon" matTooltip="Logout" aria-label="Example icon-button with heart icon" (click)="redirectToLogin()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>
+            </button>
+        </mat-toolbar>
+    </div>
+
+    <div class="app">
+        <label class="custom-file-upload mat-raised-button mat-primary">
+          <mat-icon>cloud_upload</mat-icon> Upload File
+          <input type="file" accept=".pdf" (change)="onFileSelected($event)" style="display: none;">
+        </label>
+      <div id="upload">
+        <label id="pdfName" (change)="pdfName"> {{pdfName}}</label>
+      </div>
+    
+        <label>Select number of pages</label>
+        <div id="forms">
+              <mat-form-field class="form" id="start">
+                <mat-select [(ngModel)]="startPage" disableRipple>
+                  <mat-option *ngFor="let page of numOfPagesArr" [value]="page" (selectionChange)="isPageDisabled(page)">{{ page }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field class="form" id="end">
+                <mat-select [(ngModel)]="endPage" disableRipple >
+                  <mat-option *ngFor="let page of numOfPagesArr" [value]="page" [disabled]="isPageDisabled(page)">{{ page }}</mat-option>
+                </mat-select>
+              </mat-form-field>
+        </div>
+        <label id="errorMsg" *ngIf="!isButtonEnabled()">End page must be higher then start page!</label>
+        <button id="dugme" mat-raised-button (click)="renderPdf()" *ngIf="isButtonEnabled()">Extract</button>
+    </div>
+
+    
+</body>
+
