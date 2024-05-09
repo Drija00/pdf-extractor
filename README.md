@@ -1,0 +1,1 @@
+This project aims to learn the basics of TypeScript and the Angular framework. The purpose of the application is to allow users to import any PDF file, select specific pages for extraction (e.g., from page 6 to page 8), and then export a new PDF file containing only the content from the selected pages.
